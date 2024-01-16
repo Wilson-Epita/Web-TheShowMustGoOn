@@ -37,3 +37,48 @@ code {
   --white: #ffffff;
   --black: #000000;
 }
+
+/* Main Title */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Sub Title */
+.sub-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+/* Sub-Sub-Title */
+.sub-sub-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+/* Body Text */
+.body-text {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+/* CTA Primary */
+.button-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* CTA Secondary */
+.button-secondary {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
