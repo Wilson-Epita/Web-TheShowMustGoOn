@@ -11,3 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  /* Primary Colors - Focused on vintage and music themes */
+  --primary-color: #8b572a; /* Deep, warm brown */
+  --primary-light: #b08d6c; /* Lighter shade of brown */
+  --primary-dark: #5a3921; /* Darker shade of brown */
+
+  /* Secondary Colors - Complementary to the primary palette */
+  --secondary-color: #dab48c; /* Soft, muted beige */
+  --secondary-light: #e8d2b9; /* Lighter shade of beige */
+  --secondary-dark: #c09a6b; /* Darker shade of beige */
+
+  /* Accent Colors - To highlight elements */
+  --accent-color: #a37c27; /* Gold accent for a vintage feel */
+  --accent-light: #cfa55f; /* Lighter shade of gold */
+  --accent-dark: #805d1b; /* Darker shade of gold */
+
+  /* Neutral Colors - For text and backgrounds */
+  --text-color: #333333; /* Dark grey for text */
+  --background-color: #ffffff; /* White background */
+  --background-dark: #f4f4f4; /* Light grey background */
+
+  /* Utility Colors */
+  --white: #ffffff;
+  --black: #000000;
+}
