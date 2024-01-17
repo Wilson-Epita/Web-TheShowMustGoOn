@@ -1,0 +1,60 @@
+/* Base settings for consistent spacing and font sizes */
+.vinyl-card {
+  display: flex;
+  align-items: top;
+  gap: var(--spacing-large);
+  padding: var(--spacing-large);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius-large);
+  flex-shrink: 0;
+  background-color: var(--vinyl-card-color);
+  margin: var(--spacing-medium);
+}
+
+.vinyl-card-image {
+  aspect-ratio: 1 / 1;
+  width: 150px;
+  border-radius: var(--border-radius-small);
+  object-fit: cover; /* Ensure the image covers the area */
+}
+
+.vinyl-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  width: 100%;
+  text-align: left;
+  align-items: flex-start; /* Align items to the start of the container */
+}
+
+.vinyl-card-content-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+  width: 100%;
+}
+
+.vinyl-card-category,
+.vinyl-card-featuring,
+.vinyl-card-title,
+.vinyl-card-composer,
+.vinyl-card-country {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-normal);
+  line-height: normal;
+  margin: 0;
+}
+
+.vinyl-card-category,
+.vinyl-card-featuring {
+  font-weight: var(--font-weight-thin);
+}
+
+.vinyl-card-title {
+  font-size: var(--font-size-large);
+}
+
+.vinyl-card-composer,
+.vinyl-card-country {
+  font-size: var(--font-size-medium);
+}

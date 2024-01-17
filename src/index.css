@@ -1,72 +1,121 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 :root {
-  /* Primary Colors - Focused on vintage and music themes */
-  --primary-color: #8b572a; /* Deep, warm brown */
-  --primary-light: #b08d6c; /* Lighter shade of brown */
-  --primary-dark: #5a3921; /* Darker shade of brown */
+  /* Primary Colors - Vibrant and modern */
+  --primary-color: #1e88e5; /* Bright blue */
+  --primary-light: #6ab7ff; /* Lighter shade of blue */
+  --primary-dark: #005cb2; /* Darker shade of blue */
 
-  /* Secondary Colors - Complementary to the primary palette */
-  --secondary-color: #dab48c; /* Soft, muted beige */
-  --secondary-light: #e8d2b9; /* Lighter shade of beige */
-  --secondary-dark: #c09a6b; /* Darker shade of beige */
+  /* Secondary Colors - Complementary and subdued */
+  --secondary-color: #ff7043; /* Warm orange */
+  --secondary-light: #ffa270; /* Lighter shade of orange */
+  --secondary-dark: #c63f17; /* Darker shade of orange */
 
   /* Accent Colors - To highlight elements */
-  --accent-color: #a37c27; /* Gold accent for a vintage feel */
-  --accent-light: #cfa55f; /* Lighter shade of gold */
-  --accent-dark: #805d1b; /* Darker shade of gold */
+  --accent-color: #00e676; /* Bright green */
+  --accent-light: #66ffa6; /* Lighter shade of green */
+  --accent-dark: #00c853; /* Darker shade of green */
 
   /* Neutral Colors - For text and backgrounds */
-  --text-color: #333333; /* Dark grey for text */
+  --text-color: #212121; /* Almost black for text */
   --background-color: #ffffff; /* White background */
-  --background-dark: #f4f4f4; /* Light grey background */
+  --background-dark: #eeeeee; /* Light grey background */
+
+  /* Vinyl Colors - For vinyl card backgrounds */
+  --vinyl-card-color: #1c2331; /* Midnight Blue */
 
   /* Utility Colors */
   --white: #ffffff;
   --black: #000000;
+
+  /* Utility Colors */
+  --white: #ffffff;
+  --black: #000000;
+
+  /* Spacing */
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 1.5rem;
+
+  /* Typography */
+  --font-size-small: 0.875rem; /* 14px */
+  --font-size-medium: 1.125rem; /* 18px */
+  --font-size-large: 1.75rem; /* 28px */
+  --font-size-xlarge: 2.5rem; /* 40px */
+  --font-size-xxlarge: 3.5rem; /* 56px */
+
+  /* Font Weights */
+  --font-weight-thin: 100;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  /* Line Heights */
+  --line-height-small: 1.25rem; /* 20px */
+  --line-height-medium: 1.5rem; /* 24px */
+  --line-height-large: 2rem; /* 32px */
+
+  /* Border Radius */
+  --border-radius-small: 10px;
+  --border-radius-large: 20px;
 }
 
 /* Main Title */
 .title {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: var(--font-size-xxlarge);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-large);
   color: var(--primary-color);
 }
 
 /* Sub Title */
 .sub-title {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: var(--font-size-xlarge);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-large);
   color: var(--secondary-color);
 }
 
 /* Sub-Sub-Title */
 .sub-sub-title {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-large);
   color: var(--accent-color);
 }
 
 /* Body Text */
 .body-text {
-  font-size: 1rem;
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-normal);
+  color: var(--text-color);
+}
+
+/* Small Text */
+.small-text {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-small);
   color: var(--text-color);
 }
 
 /* CTA Primary */
 .button-primary {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-medium);
   background-color: var(--primary-color);
   color: var(--white);
   padding: 0.5rem 1rem;
@@ -76,6 +125,9 @@ code {
 
 /* CTA Secondary */
 .button-secondary {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-medium);
   background-color: var(--secondary-color);
   color: var(--white);
   padding: 0.5rem 1rem;
