@@ -1,0 +1,51 @@
+/* Base settings for consistent styling */
+:root {
+  --hover-width: 200px;
+  --hover-width-added: 285px;
+  --icon-text-spacing: 10px;
+  --button-padding: 10px;
+  --button-border-radius: 20px;
+  --background-color: black;
+}
+
+.add-to-card {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  background-color: var(--background-color);
+  transition: all var(--transition-duration) var(--transition-timing-function);
+  position: relative;
+  width: var(--icon-size-small); /* Initial width to only cover the icon */
+  overflow: hidden; /* Hide the overflowing text */
+}
+
+.add-to-card .icon {
+  color: var(--icon-color);
+  font-size: var(--icon-size-small);
+}
+
+.add-to-card .text {
+  color: var(--white);
+  font-size: var(--font-size-small);
+  opacity: 0;
+  transition: opacity var(--transition-duration)
+      var(--transition-timing-function),
+    transform var(--transition-duration) var(--transition-timing-function);
+  transform: translateX(-100%); /* Move text out of view */
+  white-space: nowrap;
+  margin-left: var(--icon-text-spacing); /* Space between icon and text */
+}
+
+.add-to-card:hover {
+  width: var(--hover-width); /* Expand width on hover to fit text */
+}
+.add-to-card.added:hover {
+  width: var(--hover-width-added); /* Shrink width on hover to fit icon */
+}
+
+.add-to-card:hover .text {
+  opacity: 1;
+  transform: translateX(0); /* Move text into view */
+}

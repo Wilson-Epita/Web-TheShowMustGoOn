@@ -1,7 +1,17 @@
-/* Base settings for consistent spacing and font sizes */
 .vinyl-card {
+  position: relative;
+}
+
+.vinyl-card-add {
+  position: absolute;
+  top: var(--spacing-large);
+  right: var(--spacing-large);
+  z-index: 2;
+}
+
+.vinyl-card-wrapper {
   display: flex;
-  align-items: top;
+  align-items: flex-start;
   gap: var(--spacing-large);
   padding: var(--spacing-large);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -15,7 +25,7 @@
   aspect-ratio: 1 / 1;
   width: 150px;
   border-radius: var(--border-radius-small);
-  object-fit: cover; /* Ensure the image covers the area */
+  object-fit: cover;
 }
 
 .vinyl-card-content {
@@ -24,13 +34,19 @@
   gap: var(--spacing-medium);
   width: 100%;
   text-align: left;
-  align-items: flex-start; /* Align items to the start of the container */
+  align-items: flex-start;
 }
 
 .vinyl-card-content-bottom {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-small);
+  width: 100%;
+}
+
+.vinyl-card-content-top {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 

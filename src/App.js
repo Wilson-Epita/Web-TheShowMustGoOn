@@ -1,4 +1,5 @@
 import "./App.css";
+import AddToCard from "./components/AddToCard.js";
 import ListVinyls from "./components/ListVinyls.js";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>My Vinyl Collection</h1>
+        <AddToCard />
         <ListVinyls />
       </header>
     </div>

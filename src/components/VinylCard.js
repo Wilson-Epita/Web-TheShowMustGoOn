@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./styles/VinylCard.css";
+import AddToCard from "./AddToCard";
 
 const VinylCard = ({ vinyl }) => {
   const {
@@ -15,15 +16,20 @@ const VinylCard = ({ vinyl }) => {
 
   return (
     <div className="vinyl-card">
-      <img src={coverImageUrl} alt={name} className="vinyl-card-image" />
-      <div className="vinyl-card-content">
-        <p className="vinyl-card-category">{category}</p>
-        <div className="vinyl-card-content-bottom">
-          <h3 className="vinyl-card-title">{name}</h3>
-          {composer && <p className="vinyl-card-composer">{composer}</p>}
-          {country && <p className="vinyl-card-country">{country}</p>}
-          {artist && <p className="vinyl-card-artist">{artist}</p>}
-          {featuring && <p className="vinyl-card-featuring">{featuring}</p>}
+      <div className="vinyl-card-add">
+        <AddToCard />
+      </div>
+      <div className="vinyl-card-wrapper">
+        <img src={coverImageUrl} alt={name} className="vinyl-card-image" />
+        <div className="vinyl-card-content">
+          <p className="vinyl-card-category">{category}</p>
+          <div className="vinyl-card-content-bottom">
+            <h3 className="vinyl-card-title">{name}</h3>
+            {composer && <p className="vinyl-card-composer">{composer}</p>}
+            {country && <p className="vinyl-card-country">{country}</p>}
+            {artist && <p className="vinyl-card-artist">{artist}</p>}
+            {featuring && <p className="vinyl-card-featuring">{featuring}</p>}
+          </div>
         </div>
       </div>
     </div>

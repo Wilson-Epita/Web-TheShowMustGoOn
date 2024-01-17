@@ -13,32 +13,28 @@ code {
 }
 
 :root {
-  /* Primary Colors - Vibrant and modern */
-  --primary-color: #1e88e5; /* Bright blue */
-  --primary-light: #6ab7ff; /* Lighter shade of blue */
-  --primary-dark: #005cb2; /* Darker shade of blue */
+  /* Primary Colors - Focused on blue and brown themes */
+  --primary-color: #3f51b5; /* Deep, rich blue */
+  --primary-light: #757de8; /* Lighter shade of blue */
+  --primary-dark: #002984; /* Darker shade of blue */
 
-  /* Secondary Colors - Complementary and subdued */
-  --secondary-color: #ff7043; /* Warm orange */
-  --secondary-light: #ffa270; /* Lighter shade of orange */
-  --secondary-dark: #c63f17; /* Darker shade of orange */
+  /* Secondary Colors - Earthy brown tones */
+  --secondary-color: #8d6e63; /* Warm, medium brown */
+  --secondary-light: #be9c91; /* Lighter shade of brown */
+  --secondary-dark: #5f4339; /* Darker shade of brown */
 
-  /* Accent Colors - To highlight elements */
-  --accent-color: #00e676; /* Bright green */
-  --accent-light: #66ffa6; /* Lighter shade of green */
-  --accent-dark: #00c853; /* Darker shade of green */
+  /* Accent Colors - To complement and highlight */
+  --accent-color: #ffca28; /* Vibrant gold-yellow */
+  --accent-light: #fffd61; /* Lighter shade of yellow */
+  --accent-dark: #c79a00; /* Darker shade of yellow */
 
   /* Neutral Colors - For text and backgrounds */
-  --text-color: #212121; /* Almost black for text */
+  --text-color: #212121; /* Dark grey for text */
   --background-color: #ffffff; /* White background */
-  --background-dark: #eeeeee; /* Light grey background */
+  --background-dark: #e0e0e0; /* Light grey background */
 
   /* Vinyl Colors - For vinyl card backgrounds */
   --vinyl-card-color: #1c2331; /* Midnight Blue */
-
-  /* Utility Colors */
-  --white: #ffffff;
-  --black: #000000;
 
   /* Utility Colors */
   --white: #ffffff;
@@ -67,9 +63,18 @@ code {
   --line-height-medium: 1.5rem; /* 24px */
   --line-height-large: 2rem; /* 32px */
 
+  /* Icon Sizes */
+  --icon-size-small: 1rem; /* 16px */
+  --icon-size-medium: 1.5rem; /* 24px */
+  --icon-size-large: 2rem; /* 32px */
+
   /* Border Radius */
   --border-radius-small: 10px;
   --border-radius-large: 20px;
+
+  /* Transition */
+  --transition-duration: 0.3s;
+  --transition-timing-function: ease;
 }
 
 /* Main Title */
