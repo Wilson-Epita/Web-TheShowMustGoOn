@@ -121,11 +121,16 @@ code {
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-medium);
-  background-color: var(--primary-color);
+  background-color: var(--vinyl-card-color);
+  border-radius: var(--border-radius-small);
+  padding: var(--spacing-small) var(--spacing-medium);
+  background: var(--vinyl-card-color);
   color: var(--white);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  text-decoration: none;
+  transition: all var(--transition-duration) var(--transition-timing-function);
+}
+
+.button-primary:hover {
+  background-color: var(--primary-dark);
 }
 
 /* CTA Secondary */
@@ -133,9 +138,13 @@ code {
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-medium);
-  background-color: var(--secondary-color);
+  border-radius: var(--border-radius-small);
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: 2px solid var(--vinyl-card-color);
+  color: var(--vinyl-card-color);
+}
+
+.button-secondary:hover {
+  background-color: var(--primary-dark);
   color: var(--white);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  text-decoration: none;
 }

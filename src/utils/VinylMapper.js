@@ -16,8 +16,8 @@ The data we get from the API is:
 - fields (object) - the fields of the vinyl
 - fields.Name (string) - the name of the vinyl
 - fields.Category (string) - the category of the vinyl
-- fields.Composer (string) [optional] - the composer of the vinyl
-- fields.Country (string) [optional] - the country of the vinyl 
+- fields.Composer (array) [optional] - the composer of the vinyl
+- fields.Country (array) [optional] - the country of the vinyl 
 - fields.Featuring (string) - the featuring of the vinyl
 - fields.Cover (array) - the cover image of the vinyl
 - fields.Cover[0] (object) - the cover image of the vinyl

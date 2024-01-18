@@ -1,0 +1,27 @@
+/* Search Input */
+.search-input {
+  box-sizing: border-box;
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-medium);
+  border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: 2px solid var(--vinyl-card-color);
+  color: var(--vinyl-card-color);
+  width: 250px;
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-medium);
+}
+
+.search-input-wrapper > .search-icon {
+  background-color: var(--vinyl-card-color);
+  border-top-right-radius: var(--border-radius-small);
+  border-bottom-right-radius: var(--border-radius-small);
+  height: calc(var(--line-height-medium) + 4px);
+  padding: var(--spacing-small) var(--spacing-medium);
+}

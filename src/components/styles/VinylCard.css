@@ -1,5 +1,7 @@
 .vinyl-card {
   position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .vinyl-card-add {
@@ -19,6 +21,7 @@
   flex-shrink: 0;
   background-color: var(--vinyl-card-color);
   margin: var(--spacing-medium);
+  height: auto;
 }
 
 .vinyl-card-image {

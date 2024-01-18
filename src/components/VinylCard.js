@@ -25,8 +25,12 @@ const VinylCard = ({ vinyl }) => {
           <p className="vinyl-card-category">{category}</p>
           <div className="vinyl-card-content-bottom">
             <h3 className="vinyl-card-title">{name}</h3>
-            {composer && <p className="vinyl-card-composer">{composer}</p>}
-            {country && <p className="vinyl-card-country">{country}</p>}
+            {composer && (
+              <p className="vinyl-card-composer">{composer.join(" - ")}</p>
+            )}
+            {country && (
+              <p className="vinyl-card-country">{country.join(" - ")}</p>
+            )}
             {artist && <p className="vinyl-card-artist">{artist}</p>}
             {featuring && <p className="vinyl-card-featuring">{featuring}</p>}
           </div>

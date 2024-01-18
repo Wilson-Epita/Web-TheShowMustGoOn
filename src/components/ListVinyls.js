@@ -1,26 +1,53 @@
-// SHould call the API to get the list of vinyls
-
 import React, { useState, useEffect } from "react";
 import { getAllRecords } from "../api/airtable";
 import VinylCard from "./VinylCard";
 import { vinylMapper } from "../utils/VinylMapper";
 import "./styles/ListVinyls.css";
+import VinylCategoryFilters from "./VinylCategoryFilters";
+import SearchInput from "./SearchInput";
 
 const ListVinyls = () => {
   const [vinyls, setVinyls] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("any");
+  const [searchQuery, setSearchQuery] = useState(""); // New state for search query
 
   useEffect(() => {
-    getAllRecords().then((records) => {
+    const fetchVinyls = async () => {
+      const records = await getAllRecords();
       setVinyls(records);
-      console.log(records);
-    });
+    };
+
+    fetchVinyls();
   }, []);
 
+  const filteredVinyls = vinyls.filter((vinyl) => {
+    if (
+      selectedCategory !== "any" &&
+      vinyl.fields.Category !== selectedCategory
+    ) {
+      return false;
+    }
+    // Check for partial match in any field
+    return Object.values(vinyl.fields).some((field) =>
+      String(field).toLowerCase().includes(searchQuery)
+    );
+  });
+
   return (
-    <div className="list-vinyls-grid">
-      {vinyls.map((vinyl) => (
-        <VinylCard vinyl={vinylMapper(vinyl)} />
-      ))}
+    <div className="list-vinyls">
+      <SearchInput
+        onSearch={setSearchQuery}
+        placeholder="Rechercher votre vinyle"
+      />
+      <VinylCategoryFilters
+        selectedCategory={selectedCategory}
+        onCategoryChange={setSelectedCategory}
+      />
+      <div className="list-vinyls-grid">
+        {filteredVinyls.map((vinyl) => (
+          <VinylCard key={vinyl.id} vinyl={vinylMapper(vinyl)} />
+        ))}
+      </div>
     </div>
   );
 };
